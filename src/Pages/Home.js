@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import Loader from '../Components/Loader'
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth'
 import Navbar from '../Components/Navbar'
 import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore'
 import { app } from '../js/Firebase'
 import HandleSignOut from '../Components/Modal'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 
@@ -72,8 +73,9 @@ useEffect(()=>{
         <Navbar user = {user}/>
       
         <div className='main'>
-            <h1>WELCOME HOME <span>{user}</span></h1>
-            <button onClick={handleShow}>Log out</button>
+          <Outlet/>
+            {/* <h1>WELCOME HOME <span>{user}</span></h1>
+            <button onClick={handleShow}>Log out</button> */}
         {isLoading && <Loader/>}
         </div>
 {show && <HandleSignOut signout = {signout} handleShow = {handleShow} show = {show} setShow = {setShow}/> }

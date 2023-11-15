@@ -115,7 +115,7 @@
   flex-direction: column;
   height: 100%;
   padding-left: 20px;
-  width: 16%;
+  /* width: 16%; */
 
 
   && h3 {
@@ -156,13 +156,15 @@
 .home {
   width: 100%;
   height: 100vh;
-  background: url(https://source.unsplash.com/1366x768/?singapore);
+  /* background: url(https://source.unsplash.com/1366x768/?singapore); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
  overflow: hidden;
  position: relative;
   /* padding-top: 20px; */
+  display: grid;
+  grid-template-columns: 220px 1fr;
 
 
   
@@ -276,10 +278,14 @@
 }
 
 
-.profile {
+.user-profile {
   display: flex;
   align-items: center;
   margin-top: 10vh;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #413029;
 }
 
 .img {
@@ -291,6 +297,10 @@
   background-position: bottom;
   background-repeat: no-repeat;
   border: 5px solid #413029;
+}
+.user-profile p{
+font-size: 24px;
+font-weight: 600;
 }
 
 .handle{

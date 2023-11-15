@@ -12,7 +12,6 @@ console.log(handleShow)
   return (
  
 
- <div className='handle'>
     <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
@@ -28,7 +27,7 @@ console.log(handleShow)
         </Modal.Footer>
       </Modal>
  
- </div>
+
 
    
   )
